@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<meta name="description" content="Contact Sarvodaya Automation — Get a free 30-minute automation audit. We build n8n, Make, WhatsApp and AI workflows for businesses in Pune and across India."/>
+<title>Contact — Sarvodaya Automation</title>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<div class="orb orb1"></div>
+<div class="orb orb2"></div>
+
+<!-- NAV -->
+<nav>
+  <a class="logo" href="index.html">sarvodaya<span>.auto</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="index.html#services">Services</a></li>
+    <li><a href="privacy-policy.html">Privacy</a></li>
+    <li><a href="contact.html" class="active">Contact</a></li>
+  </ul>
+  <a class="nav-cta" href="contact.html">Get Free Audit</a>
+</nav>
+
+<div class="contact-wrap">
+  <a class="back-btn" href="index.html">← Back to Home</a>
+  <div class="sec-label">// Get In Touch</div>
+  <h2>Let's Build Something<br><em>Powerful Together</em></h2>
+  <p style="color:var(--muted2);margin-top:0.75rem;max-width:500px">Tell us about your business and what you'd like to automate. Every inquiry gets a free 30-min audit — no pitch, just a plan.</p>
+
+  <div class="contact-grid">
+
+    <!-- FORM -->
+    <form id="contactForm" onsubmit="handleForm(event)" novalidate>
+      <div class="form-row-2">
+        <div class="form-group">
+          <label for="fname">First Name</label>
+          <input type="text" id="fname" name="fname" placeholder="Rahul" required/>
+        </div>
+        <div class="form-group">
+          <label for="lname">Last Name</label>
+          <input type="text" id="lname" name="lname" placeholder="Mehta"/>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="you@company.com" required/>
+      </div>
+      <div class="form-group">
+        <label for="phone">WhatsApp / Phone</label>
+        <input type="tel" id="phone" name="phone" placeholder="+91 98765 43210"/>
+      </div>
+      <div class="form-group">
+        <label for="company">Company / Business Name</label>
+        <input type="text" id="company" name="company" placeholder="Acme Pvt Ltd"/>
+      </div>
+      <div class="form-group">
+        <label for="message">What Would You Like to Automate?</label>
+        <textarea id="message" name="message" placeholder="e.g. WhatsApp lead follow-ups, CRM sync, invoice generation, AI chatbot..." required></textarea>
+      </div>
+      <button type="submit" class="btn-glow" id="submitBtn" style="width:100%">Send Message →</button>
+      <p style="font-size:0.72rem;color:var(--muted);margin-top:0.75rem;font-family:var(--mono)">
+        By submitting you agree to our <a href="privacy-policy.html" style="color:var(--teal)">Privacy Policy</a>. We'll never share your data.
+      </p>
+    </form>
+
+    <!-- INFO CARDS -->
+    <div>
+      <div class="contact-info-card">
+        <div class="icon">✉️</div>
+        <h4>Email Us</h4>
+        <p>hello@sarvodayaautomation.com</p>
+        <p style="margin-top:0.35rem;font-size:0.78rem;color:var(--muted)">We reply within 24 hours</p>
+      </div>
+      <div class="contact-info-card">
+        <div class="icon">💬</div>
+        <h4>WhatsApp</h4>
+        <p>Message us directly for a faster response. We typically reply within 2 hours during business hours.</p>
+      </div>
+      <div class="contact-info-card">
+        <div class="icon">📍</div>
+        <h4>Location</h4>
+        <p>Pune, Maharashtra, India — 411001</p>
+        <p style="margin-top:0.35rem;font-size:0.78rem;color:var(--muted)">Serving clients globally</p>
+      </div>
+      <div class="contact-info-card" style="background:rgba(0,255,209,0.04);border-color:rgba(0,255,209,0.2)">
+        <div class="icon">⚡</div>
+        <h4 style="color:var(--teal)">Free Audit Included</h4>
+        <p>Every inquiry gets a free 30-min automation audit call — we'll map your workflows and estimate savings. No strings attached.</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <div class="footer-bottom" style="border-top:1px solid var(--border);padding:1.5rem 6%;display:flex;justify-content:space-between;font-size:0.78rem;color:var(--muted)">
+    <span>© 2025 Sarvodaya Automation. All rights reserved.</span>
+    <span><a href="privacy-policy.html">Privacy</a> &nbsp;·&nbsp; <a href="terms.html">Terms</a> &nbsp;·&nbsp; <a href="index.html">Home</a></span>
+  </div>
+</footer>
+
+<script>
+function handleForm(e) {
+  e.preventDefault();
+  const btn = document.getElementById('submitBtn');
+  btn.textContent = '✓ Message Sent!';
+  btn.style.background = '#059669';
+  btn.style.boxShadow = '0 0 30px rgba(5,150,105,0.4)';
+  btn.disabled = true;
+  setTimeout(() => {
+    btn.textContent = 'Send Message →';
+    btn.style.background = '';
+    btn.style.boxShadow = '';
+    btn.disabled = false;
+    document.getElementById('contactForm').reset();
+  }, 4000);
+}
+</script>
+</body>
+</html>
